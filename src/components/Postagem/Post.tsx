@@ -16,9 +16,13 @@ export function Post() {
 
       <div className={styles.content}>
         <p>Fala galera 🐱‍👓</p>
-        <p>To jogando muito de Viper ultimamente, mas curto pegar um duelista pra entregar umas rankeds de vez em quando</p>
-        <p>😁<a href="">julian.instalockjett@gmail.com</a></p>
-        <p><a href="">#controlador #queroserduelista #escravotbmjoga</a></p>
+        <p>To jogando muito de Viper ultimamente, mas curto pegar um duelista pra entregar umas rankeds de vez em quando 🔫</p>
+        <p><a href="">julian.instalockjett@gmail.com</a></p>
+        <p>
+          <a href="">#controlador</a>{' '}
+          <a href="">#queroserduelista</a>{' '}
+          <a href="">#escravotbmjoga</a>{' '}
+        </p>
       </div>
     </article>
   )
