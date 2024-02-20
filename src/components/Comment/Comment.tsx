@@ -2,7 +2,11 @@ import { ThumbsUp, Trash } from 'phosphor-react'
 import styles from './Comment.module.css'
 import { Avatar } from '../Avatar/Avatar'
 
-export function Comment() {
+interface PropsContent {
+  content: string;
+}
+
+export function Comment(props: PropsContent) {
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} src="https://github.com/ddevitz.png" />
@@ -20,7 +24,7 @@ export function Comment() {
             </button>
           </header>
 
-          <p>Como já dizia o ditado, nem toda reyna, mas sempre uma reyna 😫</p>
+          <p>{props.content}</p>
         </div>
 
         <footer>
