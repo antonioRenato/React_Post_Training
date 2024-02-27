@@ -31,8 +31,12 @@ export function Post(props : PostProps) {
     setNewCommentText(value);
   }
 
-  function deleteComment(comment : string) {
-    console.log(comment);
+  function deleteComment(commentToDelete : string) {
+    const commentsWithoutDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete;
+    })
+    
+    setComments(commentsWithoutDeletedOne);
   }
 
   return (
