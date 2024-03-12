@@ -39,6 +39,8 @@ export function Post(props : PostProps) {
     setComments(commentsWithoutDeletedOne);
   }
 
+  const isNewCommentEmpty = newCommentText.length === 0;
+
   return (
     <article className={styles.post}>
       <header>
@@ -72,10 +74,11 @@ export function Post(props : PostProps) {
           placeholder='Deixe um comentário...' 
           value={newCommentText}
           onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => handleNewCommentChange(event)}
+          required
         />
 
         <footer>
-          <button type='submit'>Publicar</button>
+          <button type='submit' disabled={isNewCommentEmpty}>Publicar</button>
         </footer>        
       </form>
 
